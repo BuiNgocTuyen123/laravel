@@ -1,0 +1,11 @@
+// product
+Route::get('/add--product', [Product::class, 'add__product'])->name('');
+Route::get('/edit--product/{_product_id}', [Product::class, 'edit__product']);
+Route::get('/delete--product/{_product_id}', [Product::class, 'delete__product']);
+Route::get('/all--product', [Product::class, 'all__product'])->name('');
+
+Route::get('/unactive--product/{_product_id}', [Product::class, 'unactive__product'])->name('');
+Route::get('/active--product/{_product_id}', [Product::class, 'active__product'])->name('');
+
+Route::post('/save--product', [Product::class, 'save__product'])->name('');
+Route::post('/update--product/{_product_id}', [Product::class, 'update__product'])->name('');
