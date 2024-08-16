@@ -1,55 +1,179 @@
 
 <!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Trang quản lý admin web</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Visitors Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!-- bootstrap-css -->
-<link rel="stylesheet" href="{{asset('public/backend/css/bootstrap.min.css')}}" >
-<!-- //bootstrap-css -->
-<!-- Custom CSS -->
-<link href="{{asset('public/backend/css/style.css')}}" rel='stylesheet' type='text/css' />
-<link href="{{asset('public/backend/css/style-responsive.css')}}" rel="stylesheet"/>
-<!-- font CSS -->
-<link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-<!-- font-awesome icons -->
-<link rel="stylesheet" href="{{asset('public/backend/css/font.css')}}" type="text/css"/>
-<link href="{{asset('public/backend/css/font-awesome.css')}}" rel="stylesheet"> 
-<!-- //font-awesome icons -->
-<script src="{{asset('public/backend/js/jquery2.0.3.min.js')}}"></script>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url("./bb.jpg");
+		background-color: #bbe8fc;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    /* Các điều chỉnh cho phần đăng nhập */
+    .home {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: #fff;
+    }
+
+    .content {
+        text-align: center;
+        max-width: 600px;
+        margin-right: 30px;
+    }
+
+    .content a {
+        text-decoration: none;
+        color: #bbe8fc;
+        font-size: 20px;
+        border: 2px solid #ff6633;
+        padding: 10px 40px;
+        border-radius: 40px;
+        font-weight: 500;
+        transition: 0.3s all;
+    }
+
+    .content a:hover {
+        background-color: #ddd;
+        color: #000;
+    }
+
+    .login {
+        width: 450px;
+        margin-left: 150px;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 40px;
+        border-radius: 10px;
+    }
+
+    .login h2 {
+        text-align: center;
+    }
+
+    .login form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .input-box {
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    .input-box .icon {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        color: #e0f3fe;
+    }
+
+    .input {
+        width: 100%;
+        height: 40px;
+        border: 2px solid #7e6dfb;
+        border-radius: 20px;
+        background: transparent;
+        outline: none;
+        color: #fff;
+        padding: 0 40px 0 20px;
+        font-size: 16px;
+    }
+
+    .remember-forgot {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .remember-forgot a {
+        color: #bbe8fc;
+        text-decoration: none;
+    }
+
+    .button {
+        border-radius: 50px;
+        font-size: 20px;
+        color: #fff;
+        font-weight: 800;
+        margin-bottom: 20px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        background-color: #ff6633;
+        border: none;
+        padding: 10px 20px;
+        text-transform: uppercase;
+    }
+
+    .button:hover {
+        font-size: 25px;
+        letter-spacing: 2px;
+    }
+
+    .register-link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .register-link p {
+        color: #10aae7;
+    }
+</style>
+
 </head>
 <body>
-<div class="log-w3">
-<div class="w3layouts-main">
-	<h2>Đăng nhập</h2>
-	<?php
+    <section class="home">
+        <div class="content">
+            <h2>Chào mừng !!!</h2>
+            <p>Tên tôi là Tuyến. Tôi 19 tuổi và tôi đến từ thành phố Bảo Lộc.</p>
+            <a href="{{URL::to('/trang-chu')}}">Bắt đầu</a>
+        </div>
+        <div class="login">
+            <h2>Đăng nhập</h2>
+			<?php
 	$message = Session::get('message');
 	if($message){
 		echo'<b style="color:brown; text-align:center;">'.$message.'</b>';
 		Session::put('message',null);
 	}
 	?>
-		<form action="{{URL::to('/admin-dashboard')}}" method="post">
-			{{csrf_field()}}
-			<input type="text" class="ggg" name="admin_email" placeholder="Điền email" required="">
-			<input type="password" class="ggg" name="admin_password" placeholder="Điền password" required="">
-			<span><input type="checkbox" />Nhớ mật khẩu</span>
-			<h6><a href="#">Quên mật khẩu ?</a></h6>
-				<div class="clearfix"></div>
-				<input type="submit" value="Đăng nhập" name="login">
-		</form>
-		<!-- <p>Don't Have an Account ?<a href="registration.html">Create an account</a></p> -->
-</div>
-</div>
-<script src="{{asset('public/backend/js/bootstrap.js')}}"></script>
-<script src="{{asset('public/backend/js/jquery.dcjqaccordion.2.7.js')}}"></script>
-<script src="{{asset('public/backend/js/scripts.js')}}"></script>
-<script src="{{asset('public/backend/js/jquery.slimscroll.js')}}"></script>
-<script src="{{asset('public/backend/js/jquery.nicescroll.js')}}"></script>
-<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/flot-chart/excanvas.min.js"></script><![endif]-->
-<script src="{{asset('public/backend/js/jquery.scrollTo.js')}}"></script>
+            <form action="{{URL::to('/admin-dashboard')}}" method="post">
+				{{csrf_field()}}
+                <div style="margin-right:100px;" class="input-box">
+                    <span class="icon">
+                        <i class="fa-soild fa-lock"></i>
+                        <input type="" class="input" name="admin_email" placeholder="Nhập tên đăng nhập của bạn" autocomplete="off" required>
+                    </span>
+                </div>
+                <div style="margin-top:60px; margin-right:100px;" class="input-box">
+                    <span class="icon">
+                        <i class="fa-soild fa-lock"></i>
+                        <input type="password" class="input" name="admin_password" placeholder="Nhập mật khẩu của bạn" autocomplete="off" required>
+                    </span>
+                </div>
+                <div style="margin-top:80px;" class="remember-forgot">
+                    <label for=""><input type="checkbox">Nhớ tài khoản</label>
+                    <a href="#">Quên mật khẩu?</a>
+                </div>
+                <button type="submit" name="login" class="button">Tiếp tục</button>
+                <div class="register-link">
+                    <p>Chưa là thành viên?</p>
+                    <a href="#">Đăng ký ngay</a>
+                </div>
+            </form>
+        </div>
+    </section>
 </body>
 </html>

@@ -8,35 +8,33 @@
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- bootstrap-css -->
-<link rel="stylesheet" href="{{asset('public/backend/css/bootstrap.min.css')}}" >
-<!-- //bootstrap-css -->
-<!-- Custom CSS -->
-<link href="{{asset('public/backend/css/style.css')}}" rel='stylesheet' type='text/css' />
-<link href="{{asset('public/backend/css/style-responsive.css')}}" rel="stylesheet"/>
+<link rel="stylesheet" href="{{asset('backend/css/bootstrap.min.css')}}" >
+<link href="{{asset('backend/css/style.css')}}" rel='stylesheet' type='text/css' />
+<link href="{{asset('backend/css/style-responsive.css')}}" rel="stylesheet"/>
 <!-- font CSS -->
 <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 <!-- font-awesome icons -->
-<link rel="stylesheet" href="{{asset('public/backend/css/font.css')}}" type="text/css"/>
-<link href="{{asset('public/backend/css/font-awesome.css')}}" rel="stylesheet"> 
-<link rel="stylesheet" href="{{asset('public/backend/css/morris.css')}}" type="text/css"/>
+<link rel="stylesheet" href="{{asset('backend/css/font.css')}}" type="text/css"/>
+<link href="{{asset('backend/css/font-awesome.css')}}" rel="stylesheet"> 
+<link rel="stylesheet" href="{{asset('backend/css/morris.css')}}" type="text/css"/>
 <!-- calendar -->
-<link rel="stylesheet" href="{{asset('public/backend/css/monthly.css')}}">
+<link rel="stylesheet" href="{{asset('backend/css/monthly.css')}}">
 <!-- //calendar -->
 <!-- //font-awesome icons -->
-<script src="{{asset('public/backend/js/jquery2.0.3.min.js')}}"></script>
-<script src="{{asset('public/backend/js/raphael-min.js')}}"></script>
-<script src="{{asset('public/backend/js/morris.js')}}"></script>
+<script src="{{asset('backend/js/jquery2.0.3.min.js')}}"></script>
+<script src="{{asset('backend/js/raphael-min.js')}}"></script>
+<script src="{{asset('backend/js/morris.js')}}"></script>
 </head>
-<body>
-<section id="container">
+<body >
+<section id="container" style="background-color: rgb(27, 27, 42)">
 <!--header start-->
-<header class="header fixed-top clearfix">
+<header class="header fixed-top clearfix" style="background-color: rgb(27, 27, 42)">
 <!--logo start-->
-<div class="brand">
+<div class="brand" style="background-color: rgb(27, 27, 42)">
     <a href="index.html" class="logo">
 Admin
     </a>
-    <div class="sidebar-toggle-box">
+    <div class="sidebar-toggle-box" style="background-color: rgb(27, 27, 42)">
         <div class="fa fa-bars"></div>
     </div>
 </div>
@@ -45,12 +43,12 @@ Admin
     <!--search & user info start-->
     <ul class="nav pull-right top-menu">
         <li>
-            <input type="text" class="form-control search" placeholder=" Search">
+            <input style="background-color: rgb(27, 27, 42)" type="text" class="form-control search" placeholder=" Search">
         </li>
         <!-- user login dropdown start-->
         <li class="dropdown">
-            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                <img alt="" src="{{asset('public/backend/images/2.png')}}">
+            <a style="background-color: rgb(27, 27, 42)" data-toggle="dropdown" class="dropdown-toggle" href="#">
+                <img alt="" src="{{asset('backend/images/2.png')}}">
                 <span class="username">
 				<?php
 	$name = Session::get('admin_name');
@@ -116,34 +114,33 @@ Admin
 						<li><a href="{{URL::to('/all-product')}}">Liệt kê sản phẩm</a></li>
                     </ul>
                 </li>
-               
+				<li class="sub-menu">
+                    <a href="javascript:;">
+                        <i class="fa fa-book"></i>
+                        <span>Hóa đơn</span>
+                    </a>
+                    <ul class="sub">
+						<li><a href="{{URL::to('/all-bill')}}">Liệt kê Hóa đơn</a></li>
+                    </ul>
+                </li>
             </ul>            </div>
         <!-- sidebar menu end-->
     </div>
 </aside>
 <!--sidebar end-->
 <!--main content start-->
-<section id="main-content">
-	<section class="wrapper">
+<section id="main-content" >
+	<section class="wrapper" >
 		@yield('admin_content')
-</section>
- <!-- footer -->
-		  <div class="footer">
-			<div class="wthree-copyright">
-			  <p>© 2017 Visitors. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
-			</div>
-		  </div>
-  <!-- / footer -->
-</section>
 <!--main content end-->
 </section>
-<script src="{{asset('public/backend/js/bootstrap.js')}}"></script>
-<script src="{{asset('public/backend/js/jquery.dcjqaccordion.2.7.js')}}"></script>
-<script src="{{asset('public/backend/js/scripts.js')}}"></script>
-<script src="{{asset('public/backend/js/jquery.slimscroll.js')}}"></script>
-<script src="{{asset('public/backend/js/jquery.nicescroll.js')}}"></script>
+<script src="{{asset('backend/js/bootstrap.js')}}"></script>
+<script src="{{asset('backend/js/jquery.dcjqaccordion.2.7.js')}}"></script>
+<script src="{{asset('backend/js/scripts.js')}}"></script>
+<script src="{{asset('backend/js/jquery.slimscroll.js')}}"></script>
+<script src="{{asset('backend/js/jquery.nicescroll.js')}}"></script>
 <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/flot-chart/excanvas.min.js"></script><![endif]-->
-<script src="{{asset('public/backend/js/jquery.scrollTo.js')}}"></script>
+<script src="{{asset('backend/js/jquery.scrollTo.js')}}"></script>
 <!-- morris JavaScript -->	
 <script>
 	$(document).ready(function() {
@@ -201,7 +198,7 @@ Admin
 	});
 	</script>
 <!-- calendar -->
-	<script type="text/javascript" src="{{asset('public/backend/js/monthly.js')}}"></script>
+	<script type="text/javascript" src="{{asset('backend/js/monthly.js')}}"></script>
 	<script type="text/javascript">
 		$(window).load( function() {
 

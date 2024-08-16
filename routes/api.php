@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +18,9 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/product', function (Request $request){
+    $product = DB::table('tbl_product')->get();
+    return response(['product'=>$product]);
+});
+Route::post('/add-product', 'App\Http\Controllers\ProductController@add_product');

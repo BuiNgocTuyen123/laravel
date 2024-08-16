@@ -5,92 +5,151 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Home | E-Shopper</title>
-    <link href="{{asset('public/fontend/css/bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{asset('public/fontend/css/font-awesome.min.css')}}" rel="stylesheet">
-    <link href="{{asset('public/fontend/css/prettyPhoto.css')}}" rel="stylesheet">
-    <link href="{{asset('public/fontend/css/price-range.css')}}" rel="stylesheet">
-    <link href="{{asset('public/fontend/css/animate.css')}}" rel="stylesheet">
-	<link href="{{asset('public/fontend/css/main.css')}}" rel="stylesheet">
-	<link href="{{asset('public/fontend/css/responsive.css')}}" rel="stylesheet">
+    <title>Home | RE-Shopper</title>
+    <link href="{{asset('fontend/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('fontend/css/font-awesome.min.css')}}" rel="stylesheet">
+    <link href="{{asset('fontend/css/prettyPhoto.css')}}" rel="stylesheet">
+    <link href="{{asset('fontend/css/price-range.css')}}" rel="stylesheet">
+    <link href="{{asset('fontend/css/animate.css')}}" rel="stylesheet">
+	<link href="{{asset('fontend/css/main.css')}}" rel="stylesheet">
+	<link href="{{asset('fontend/css/responsive.css')}}" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->       
-    <link rel="shortcut icon" href="{{('public/fontend/images/ico/favicon.ico')}}">
+    <link rel="shortcut icon" href="{{('fontend/images/ico/favicon.ico')}}">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png')}}">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png')}}">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png')}}">
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png')}}">
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	<style>
+		 @import url('http://fonts.googleapis.com/css?family=poppins:ital,wght@0,400;0,500;1,500&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+  .logo ion-icon:hover {
+    color: red;  
+  }
+  header .logo ion-icon {
+    font-size: 50px;
+    color: white;
+    animation: animate 4s infinite linear;
+  }
+  
+  .logo ion-icon:hover {
+  color: red;  
+  animation: rotate 4s infinite linear, scaleUp 0.3s forwards; /* Kích hoạt cả hai animation khi hover */
+}
+  @keyframes animate {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.3);
+  }
+}
+	</style>
 </head><!--/head-->
 
 <body>
 	<header id="header"><!--header-->
-		<div class="header_top"><!--header_top-->
-			<div class="container">
+		<div class="header_top" style="background-color: brown"><!--header_top-->
+			<div class="container" >
 				<div class="row">
 					<div class="col-sm-6">
 						<div class="contactinfo">
 							<ul class="nav nav-pills">
-								<li><a href="#"><i class="fa fa-phone"></i> +2 95 01 88 821</a></li>
-								<li><a href="#"><i class="fa fa-envelope"></i> info@domain.com</a></li>
+								<li><a href="#" style="color:white;"><i class="fa fa-phone"></i> +2 95 01 88 821</a></li>
+								<li><a href="#" style="color:white;"><i class="fa fa-envelope"></i> info@domain.com</a></li>
 							</ul>
 						</div>
 					</div>
 					<div class="col-sm-6">
 						<div class="social-icons pull-right">
 							<ul class="nav navbar-nav">
-								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-								<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+								<li><a href="#" style="color:white;"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#" style="color:white;"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#" style="color:white;"><i class="fa fa-linkedin"></i></a></li>
+								<li><a href="#" style="color:white;"><i class="fa fa-dribbble"></i></a></li>
+								<li><a href="#" style="color:white;"><i class="fa fa-google-plus"></i></a></li>
 							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div><!--/header_top-->
-		
-		<div class="header-middle"><!--header-middle-->
+		<div class="header-middle" style="background-color: black; height:100px;"><!--header-middle-->
 			<div class="container">
 				<div class="row">
-					<div class="col-sm-4">
-						<div class="logo pull-left">
-							<a href="index.html"><img src="{{('public/fontend/img/logo.png')}}" alt="" /></a>
-						</div>
-						<div class="btn-group pull-right">
-							<div class="btn-group">
-								<button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
-									USA
-									<span class="caret"></span>
-								</button>
-								<ul class="dropdown-menu">
-									<li><a href="#">Canada</a></li>
-									<li><a href="#">UK</a></li>
-								</ul>
-							</div>
-							
-							<div class="btn-group">
-								<button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
-									DOLLAR
-									<span class="caret"></span>
-								</button>
-								<ul class="dropdown-menu">
-									<li><a href="#">Canadian Dollar</a></li>
-									<li><a href="#">Pound</a></li>
-								</ul>
-							</div>
-						</div>
+					<div class="col-sm-2">
+						<div class="logo">
+							<a style="color: aliceblue" href="{{URL::to('/trang-chu')}}"> <ion-icon name="logo-react"></ion-icon>Reshop</a>
+						   </div>
+
 					</div>
-					<div class="col-sm-8">
+					<style>
+						.hi{
+							color: azure;
+						}
+						.nav .ui:hover{
+							width: 100px;
+							background-color: chartreuse;
+							border-radius: 20px;
+							text-align: center;
+							border: solid 2px yellow;
+						}
+						.nav .ui{
+							background-color: black;
+														width: 150px;
+														text-align: center
+						}
+					</style>
+					<div class="col-md-2">
+					</div>
+					<div class="col-sm-6">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
-								<li><a href="#"><i class="fa fa-user"></i> Account</a></li>
-								<li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
-								<li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-								<li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
-								<li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>
+								<?php
+								$customer_id = Session::get('customer_id');
+								if($customer_id != NULL){
+								?>
+								<li><a class="ui" href="{{URL::to('/checkout')}}"><i class="fa fa-crosshairs hi"></i><b style="color:aliceblue">Thanh toán</b></a></li>
+								<?php
+								}else {
+								?>
+								<li><a class="ui" href="{{URL::to('/login-checkout')}}"><i class="fa fa-crosshairs hi"></i><b style="color:aliceblue">Thanh toán</b></a></li>
+								<?php } ?>
+								<li><a class="ui" href="{{URL::to('/show-cart')}}"><i class="fa fa-shopping-cart hi"></i><b style="color:aliceblue"> Giỏ hàng</b></a></li>
+								<?php
+								$customer_id = Session::get('customer_id');
+								if($customer_id != NULL){
+								?>
+																<li><a class="ui"  href="{{URL::to('/logout-checkout')}}"><i class="fa fa-lock hi"></i><b style="color:aliceblue">Đăng xuất</b></a></li>
+								<?php
+								}else {
+								?>
+<li><a class="ui"  href="{{URL::to('/login-checkout')}}"><i class="fa fa-lock hi"></i><b style="color:aliceblue">Đăng nhập</b></a></li>
+									<?php } ?>
+									<div style="margin-right:-330px;" class="search_box pull-right">
+										<form action="{{URL::to('/tim-kiem')}}" method="POST">
+											{{csrf_field()}}
+										<input name="keywords_submit"  type="text" placeholder="Search"/>
+											<input type="submit" name="search_items" class="btn btn-success btn-sm" value="tìm kiếm">
+										</form>
+									</div>
 							</ul>
 						</div>
 					</div>
@@ -110,37 +169,17 @@
 								<span class="icon-bar"></span>
 							</button>
 						</div>
-						<div class="mainmenu pull-left">
-							<ul class="nav navbar-nav collapse navbar-collapse">
-								<li><a href="{{URL::to('/trang-chu')}}" class="active">Trang chủ</a></li>
-								<li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
-                                    <ul role="menu" class="sub-menu">
-                                        <li><a href="shop.html">Products</a></li>
-			
-                                    </ul>
-                                </li> 
-								<li class="dropdown"><a href="#">Tin tức<i class="fa fa-angle-down"></i></a>
-                                </li> 
-								<li><a href="404.html">Giỏ hàng</a></li>
-								<li><a href="contact-us.html">Liên hệ</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-sm-3">
-						<div class="search_box pull-right">
-							<input type="text" placeholder="Search"/>
-						</div>
 					</div>
 				</div>
 			</div>
-		</div><!--/header-bottom-->
-	</header><!--/header-->
+		</div>
+	</header>
 	
 	<section id="slider"><!--slider-->
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
-					<div id="slider-carousel" class="carousel slide" data-ride="carousel">
+					<div style="width:1526px; margin-left:-256px; margin-top:-59px;" id="slider-carousel" class="carousel slide" data-ride="carousel">
 						<ol class="carousel-indicators">
 							<li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
 							<li data-target="#slider-carousel" data-slide-to="1"></li>
@@ -150,39 +189,18 @@
 						<div class="carousel-inner">
 							<div class="item active">
 								<div class="col-sm-6">
-									<h1><span>E</span>-SHOPPER</h1>
-									<h2>Free E-Commerce Template</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-									<button type="button" class="btn btn-default get">Get it now</button>
-								</div>
-								<div class="col-sm-6">
-									<img src="{{('public/fontend/img/girl1.jpg')}}" class="girl img-responsive" alt="" />
-									<img src="{{('public/fontend/img/pricing.png')}}"  class="pricing" alt="" />
+									<img style="width:1500px;" src="{{('uploads/product/slider_2.jpg')}}" alt="" />
 								</div>
 							</div>
 							<div class="item">
 								<div class="col-sm-6">
-									<h1><span>E</span>-SHOPPER</h1>
-									<h2>100% Responsive Design</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-									<button type="button" class="btn btn-default get">Get it now</button>
-								</div>
-								<div class="col-sm-6">
-									<img src="{{('public/fontend/img/girl2.jpg')}}" class="girl img-responsive" alt="" />
-									<img src="{{('public/fontend/img/pricing.png')}}"  class="pricing" alt="" />
+									<img style="width:1500px;" src="{{('uploads/product/slider4.jpg')}}" alt="" />
 								</div>
 							</div>
 							
 							<div class="item">
 								<div class="col-sm-6">
-									<h1><span>E</span>-SHOPPER</h1>
-									<h2>Free Ecommerce Template</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-									<button type="button" class="btn btn-default get">Get it now</button>
-								</div>
-								<div class="col-sm-6">
-									<img src="{{('public/fontend/img/girl3.jpg')}}" class="girl img-responsive" alt="" />
-									<img src="{{('public/fontend/img/pricing.png')}}" class="pricing" alt="" />
+									<img style="width:1500px;" src="{{('uploads/product/slider5.jpg')}}" alt="" />
 								</div>
 							</div>
 							
@@ -206,42 +224,24 @@
 			<div class="row">
 				<div class="col-sm-3">
 					<div class="left-sidebar">
-						<h2>Danh mục sản phẩm</h2>
-						<div class="panel-group category-products" id="accordian"><!--category-productsr-->
+						<h2 style="color: brown">Danh mục sản phẩm</h2>
+						<div style="background-color: rgb(189, 189, 206)" class="panel-group category-products" id="accordian"><!--category-productsr-->
+							<ul class="nav nav-pills nav-stacked">
 						@foreach($category as $key => $cate)
-
-							
-							
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title"><a href="{{URL::to('/danh-muc-san-pham/'.$cate->category_id)}}">{{$cate->category_name}}</a></h4>
-								</div>
-							</div>
+									<li style="background-color: rgb(27, 27, 42)" class="panel-title"><a  style="color: brown" href="{{URL::to('/danh-muc-san-pham/'.$cate->category_id)}}">{{$cate->category_name}}</a></li>
 							@endforeach
 						</div><!--/category-products-->
 					
 						<div class="brands_products"><!--brands_products-->
-							<h2>Thương hiệu sản phẩm</h2>
-							<div class="brands-name">
+							<h2 style="color:blueviolet">Thương hiệu sản phẩm</h2>
+							<div style="background-color: rgb(189, 189, 206)" class="brands-name">
 								<ul class="nav nav-pills nav-stacked">
 								@foreach($brand as $key => $brand)
-									<li><a href="{{URL::to('/thuong-hieu-san-pham'.$brand->brand_id)}}"> <span class="pull-right">(50)</span>{{$brand->brand_name}}</a></li>
+									<li><a href="{{URL::to('/thuong-hieu-san-pham/'.$brand->brand_id)}}"> <span class="pull-right">(50)</span>{{$brand->brand_name}}</a></li>
 									@endforeach
 								</ul>
 							</div>
 						</div><!--/brands_products-->
-						
-						<!-- <div class="price-range">price-range -->
-							<!-- <h2>Price Range</h2>
-							<div class="well text-center">
-								 <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="5" data-slider-value="[250,450]" id="sl2" ><br />
-								 <b class="pull-left">$ 0</b> <b class="pull-right">$ 600</b>
-							</div> -->
-						<!-- </div>/price-range -->
-						
-						<!-- <div class="shipping text-center">shipping -->
-							<!-- <img src="{{('public/fontend/img/shipping.jpg')}}" alt="" />
-						</div>/shipping -->
 					
 					</div>
 				</div>
@@ -253,13 +253,13 @@
 		</div>
 	</section>
 	
-	<footer id="footer"><!--Footer-->
+	<footer id="footer" style="background: linear-gradient(to right, #4e5150, #c1d3e6, #f897c4,brown);"><!--Footer-->
 		<div class="footer-top">
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-2">
 						<div class="companyinfo">
-							<h2><span>e</span>-shopper</h2>
+							<h2><span style="color: black">Re</span>-shopper</h2>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor</p>
 						</div>
 					</div>
@@ -268,7 +268,7 @@
 							<div class="video-gallery text-center">
 								<a href="#">
 									<div class="iframe-img">
-										<img src="{{('public/fontend/img/iframe1.png')}}" alt="" />
+										<img src="{{('fontend/img/iframe1.png')}}" alt="" />
 									</div>
 									<div class="overlay-icon">
 										<i class="fa fa-play-circle-o"></i>
@@ -283,7 +283,7 @@
 							<div class="video-gallery text-center">
 								<a href="#">
 									<div class="iframe-img">
-										<img src="{{('public/fontend/img/iframe2.png')}}" alt="" />
+										<img src="{{('fontend/img/iframe2.png')}}" alt="" />
 									</div>
 									<div class="overlay-icon">
 										<i class="fa fa-play-circle-o"></i>
@@ -298,7 +298,7 @@
 							<div class="video-gallery text-center">
 								<a href="#">
 									<div class="iframe-img">
-										<img src="{{('public/fontend/img/iframe3.png')}}" alt="" />
+										<img src="{{('fontend/img/iframe3.png')}}" alt="" />
 									</div>
 									<div class="overlay-icon">
 										<i class="fa fa-play-circle-o"></i>
@@ -313,7 +313,7 @@
 							<div class="video-gallery text-center">
 								<a href="#">
 									<div class="iframe-img">
-										<img src="{{('public/fontend/img/iframe4.png')}}" alt="" />
+										<img src="{{('fontend/img/iframe4.png')}}" alt="" />
 									</div>
 									<div class="overlay-icon">
 										<i class="fa fa-play-circle-o"></i>
@@ -326,7 +326,7 @@
 					</div>
 					<div class="col-sm-3">
 						<div class="address">
-							<img src="{{('public/fontend/img/map.png')}}" alt="" />
+							<img src="{{('fontend/img/map.png')}}" alt="" />
 							<p>505 S Atlantic Ave Virginia Beach, VA(Virginia)</p>
 						</div>
 					</div>
@@ -390,7 +390,7 @@
 							<h2>About Shopper</h2>
 							<form action="#" class="searchform">
 								<input type="text" placeholder="Your email address" />
-								<button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
+								<button style="background-color: #4e5150" type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
 								<p>Get the most recent updates from <br />our site and be updated your self...</p>
 							</form>
 						</div>
@@ -400,24 +400,42 @@
 			</div>
 		</div>
 		
-		<div class="footer-bottom">
+		<div class="footer-bottom" style="background: linear-gradient(to right,brown,#f897c4,#c1d3e6, #4e5150  );">
 			<div class="container">
 				<div class="row">
-					<p class="pull-left">Copyright © 2013 E-SHOPPER Inc. All rights reserved.</p>
+					<p class="pull-left">Copyright © 2013 RE-SHOPPER Inc. All rights reserved.</p>
 					<p class="pull-right">Designed by <span><a target="_blank" href="http://www.themeum.com">Themeum</a></span></p>
 				</div>
 			</div>
 		</div>
 		
 	</footer><!--/Footer-->
-	
+    <script src="{{asset('fontend/js/jquery.js')}}"></script>
+	<script src="{{asset('fontend/js/bootstrap.min.js')}}"></script>
+	<script src="{{asset('fontend/js/jquery.scrollUp.min.js')}}"></script>
+	<script src="{{asset('fontend/js/price-range.js')}}"></script>
+    <script src="{{asset('fontend/js/jquery.prettyPhoto.js')}}"></script>
+    <script src="{{asset('fontend/js/main.js')}}"></script>
+<!-- ... Các script khác ... -->
+<script>
+$(document).ready(function() {
+    $('body').on('click', '.pagination a', function(e) {
+        e.preventDefault();
+        var url = $(this).attr('href');
+        fetchProducts(url);
+    });
 
-  
-    <script src="{{asset('public/fontend/js/jquery.js')}}"></script>
-	<script src="{{asset('public/fontend/js/bootstrap.min.js')}}"></script>
-	<script src="{{asset('public/fontend/js/jquery.scrollUp.min.js')}}"></script>
-	<script src="{{asset('public/fontend/js/price-range.js')}}"></script>
-    <script src="{{asset('public/fontend/js/jquery.prettyPhoto.js')}}"></script>
-    <script src="{{asset('public/fontend/js/main.js')}}"></script>
+    function fetchProducts(url) {
+        $.ajax({
+            url: url,
+            success: function(data) {
+                $('#product-list').html(data); // Assuming you have a div with id="product-list" that wraps your products.
+            }
+        });
+    }
+});
+
+</script>
+
 </body>
 </html>
